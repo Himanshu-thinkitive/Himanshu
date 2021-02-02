@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="em" class="com.thinkitive.Employee" scope="prototype"  autowire="constructor">
+	
+	<!-- <constructor-arg name="id" value="1"></constructor-arg>
+	<constructor-arg name="name" value="himanshu"></constructor-arg>
+	<constructor-arg name="sal" value="999"> </constructor-arg>  -->
+	
+	<property name="id" value="1"></property>
+	<property name="name" value="divyanshu"></property>
+	<property name="sal" value="77"></property>
+	
+ 	<property name="skills">
+	<set>
+	<value>c</value>
+	<value>android</value>
+	<value>c</value>
+	</set>
+	</property> 
+	
+<!-- 	 <property name="a" ref="add"></property>   -->
+	
+	</bean>
+     
+      
+    
+ <!--     <bean id="add" factory-bean="hi" factory-method="getInstance" >
+   
+    </bean>
+    <bean id="hi" class="com.thinkitive.AddressFactory">
+    
+    </bean>    -->
+    
+    <bean id="a" class="com.thinkitive.Address">
+    <constructor-arg name="pin" value="470002"></constructor-arg>
+    <constructor-arg name="city" value="sagar"></constructor-arg>
+    </bean>  
+    
+</beans>
